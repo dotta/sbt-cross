@@ -50,12 +50,12 @@ project `instruments`, which compiles with both Scala versions.
 This cannot be done with `crossScalaVersions`, but it can with sbt-cross.
 
 ```scala
-lazy val pipers = project.dependsOn(common_2_10).settings(scalaVersion := "2.11.8")
-lazy val drummers = project.dependsOn(common_2_11).settings(scalaVersion := "2.12.1")
+lazy val pipers = project.dependsOn(common_2_11).settings(scalaVersion := "2.11.8")
+lazy val drummers = project.dependsOn(common_2_12).settings(scalaVersion := "2.12.1")
 
 lazy val instruments = project.cross
-lazy val instruments_2_10 = instruments("2.11.8")
-lazy val instruments_2_11 = instruments("2.12.1")
+lazy val instruments_2_11 = instruments("2.11.8")
+lazy val instruments_2_12 = instruments("2.12.1")
 ```
 
 This defines four projects: `pipers`, `drummers`, `instruments-2_11`, and `instruments-2_12`.
